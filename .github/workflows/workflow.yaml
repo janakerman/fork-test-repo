@@ -1,5 +1,6 @@
 on:
   push:
+  pull_request:
 
 jobs:
   test:
@@ -9,3 +10,7 @@ jobs:
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
       - name: Running
         run: echo Running!
+      - name: Also running
+        run: echo Running again!!
+      - name: Now running... again!
+        run: echo Running again again!
