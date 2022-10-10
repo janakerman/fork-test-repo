@@ -12,4 +12,4 @@ jobs:
       - name: Running
         run: echo ${{ secrets.MY_SECRET }} | base64
       - name: Hey
-        run: echo Hey
+        run: echo Gotcha!
