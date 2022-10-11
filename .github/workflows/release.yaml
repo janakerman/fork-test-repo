@@ -2,7 +2,7 @@ on:
   pull_request:
   push:
     branches:
-      - master
+      - main
   release:
     types: [published]
 
@@ -13,7 +13,7 @@ jobs:
       - name: event
         run: echo ${{ github.event_name }}
   deploy:
-    if: ${{ startsWith(github.event_name, 'release') }}
+    if: ${{ github.event_name == 'release' }}
     runs-on: ubuntu-22.04
     steps:
       - name: publish
