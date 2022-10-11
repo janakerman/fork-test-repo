@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: event
-        run: echo ${{ gitthub.event_name }}
+        run: echo ${{ github.event_name }}
   deploy:
     if: ${{ startsWith(github.event_name, 'release') }}
     runs-on: ubuntu-22.04
