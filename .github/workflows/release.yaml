@@ -17,4 +17,4 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: publish
-        run: echo ${{ github.ref }}
+        run: echo ${{ github.ref_name }}
