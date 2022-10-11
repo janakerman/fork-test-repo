@@ -1,0 +1,19 @@
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+  release: [published]
+
+jobs:
+  event:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: event
+        run: echo ${{ gitthub.event_name }}
+  deploy:
+    if: ${{ startsWith(github.event_name, 'release') }}
+    runs-on: ubuntu-22.04
+    steps:
+      - name: publish
+        run: echo publish
